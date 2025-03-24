@@ -1,14 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>TrackerApp</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking App</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./src/main.js" defer></script>
+    
+</head>
+<div>
+<h1>Simple Tracking App</h1>
+
+
+<form class="user-input-form" id="form">
+    <div>
+      <label for="username">Please enter your name:</label>
+      <input
+        type="text"
+        placeholder="Enter your name here..."
+        id="username"
+        name="username"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="email">Please enter your email:</label>
+      <input
+        type="email"
+        placeholder="Enter your email here..."
+        id="email"
+        name="email"
+      />
+    </div>
+
+    <div>
+      <label for="password">Please enter your password:</label>
+      <input
+        type="password"
+        placeholder="Enter your password here..."
+        id="password"
+        name="password"
+      />
+    </div>
+
+    <div>
+      <input type="checkbox" id="showPassword" name="showPassword" />
+      <label for="showPassword">Show Password</label>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit" />
+      
+    </div>
+  </form>
+  
+   
+</div>
+    
+</body>
+
 </html>
