@@ -4,11 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>TrackerApp</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Tubullar</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <h1>User input and Server Recap stuff</h1>
+    <form id="messageForm">
+      <label for="userName">Thy namu goes here:</label>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        placeholder="Please enter your"
+      />
+      <label for="userMessage">whatever:</label>
+      <input
+        type="text"
+        name="userMessage"
+        id="userMessage"
+        placeholder="SPEAK!"
+      />
+      <input type="submit" value="Blip" />
+    </form>
   </body>
 </html>
