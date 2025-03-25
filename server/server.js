@@ -1,14 +1,16 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import OpenAI from "openai";
+import pg from "pg";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 dotenv.config();
 
-
+const db = new pg.Pool({
+  connectionString: process.env.DB_CONN_STRING
+})
 
 
 
@@ -43,7 +45,21 @@ app.post("/messages", function (request, response) {
   });
 });
 
+app.post("/userdata",async function(request,response){
+const data = request.body.formValues;
+console.log(data)
+const exists = await db.query("SELECT * FROM userform WHERE USERNAME=$1",[data.username])
+console.log(exists)
+if (exists.rowCount === 0){
+  const success = await db. query("INSERT INTO userform (username,password,email) VALUES ($1,$2,$3)",[data.username,data.password,data.email])
+  console.log(success )
+  if (success.rowCount === 1){
+    response.json("success")
+  }
+}
 
-app.listen(PORT, function () {
-  console.log(`This fantastical, magical App is running on ${PORT}`);
+})
+
+app.listen(8080, function () {
+  console.log(`This fantastical, magical App is running on ${8080}`);
 });

@@ -39,17 +39,29 @@ function handleSubmit(event) {
   myForm.addEventListener("submit", handleSubmitWithFormData);
   
   
-  function handleSubmitWithFormData(event) {
+  async function handleSubmitWithFormData(event) {
     event.preventDefault();
-  }
+  
   const data = new FormData(myForm);
   const formValues = Object.fromEntries(data);
   
   console.log("The form values are", formValues);
   
   console.log("The email is", formValues.email);
+  
+const response= await fetch("http://localhost:8080/userdata",{
+  method: "POST",
+    headers: {
+      "Content-Type": "application/json",
 
-myForm.addEventListener("submit", sendChatRequest);
+    },
+    body: JSON.stringify({formValues})
+})
+
+ 
+
+
+  }
 
 async function sendChatRequest(event) {
   
@@ -102,3 +114,19 @@ alertButton.addEventListener('click', function() {
   alert('This is an alert');
 });
 
+
+
+function toggleButtons() {
+  const SigninButton = document.getElementById("Sign-in-button");
+  const groupButton = document.getElementById("Group-button");
+
+  
+  
+  if (SigninButton.style.opacity === '0') {
+    SigninButton.style.opacity = '1';
+    groupButton.style.opacity = '0';
+  } else {
+    SigninButton.style.opacity = '0';
+    groupButton.style.opacity = '1';
+  }
+}
