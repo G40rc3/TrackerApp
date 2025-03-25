@@ -1,16 +1,34 @@
 section{
-  border: 2px solid black;
-  height:500px;
-  text-align: center;
-  
+    border: 2px solid black;
+    height:500px;
+    text-align: center;
+    
 }
 
 .user-input-form {
-  display: flex;
-  flex-direction: column;
-  
-  gap: 30px;
-  border: 2px solid black;
-   max-width: 300px;
-  
+    display: flex;
+    flex-direction: column;
+    
+    gap: 30px;
+    border: 2px solid black;
+     max-width: 300px;
+    
 }
+.off {
+    background-color: red;
+    color: white;
+}
+
+
+.on {
+    background-color: green;
+    color: white;
+}
+
+
+
+  
+  .clicked {
+    background-color: orange; 
+  }
+  
