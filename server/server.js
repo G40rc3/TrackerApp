@@ -1,18 +1,20 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import OpenAI from "openai";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-const PORT = 8080;
 dotenv.config();
 
 app.get("/", function (request, response) {
-  console.log("This is the root route. Lero lero!");
+  response.json({ message: "Beep" });
 });
 
-app.listen(PORT, function () {
-  console.log(`Currently running on port: ${PORT}`);
+app.post("/message", function (request, response) {
+  response.json({ message: "Boop" });
+});
+
+app.listen(8080, function () {
+  console.log("Server is listening on port 8080");
 });
