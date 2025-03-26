@@ -1,3 +1,58 @@
+#mapy {
+  margin: 0 auto;
+  overflow: hidden;
+}
+section{
+    border: 2px solid black;
+    height:500px;
+    text-align: center;
+    
+}
+
+.user-input-form {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 30px;
+    border: 2px solid black;
+     max-width: 300px;
+    
+}
+.off {
+    background-color: red;
+    color: white;
+}
+
+
+.on {
+    background-color: green;
+    color: white;
+}
+
+
+
+  
+  .clicked {
+    background-color: orange; 
+  }
+  
+  
+
+  .button-container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+
+.toggle-btn {
+    position: absolute;
+    
+}
+
+#Group-button {
+    opacity: 0;  
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 

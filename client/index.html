@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="src/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    <script type="module" src="/src/main.js"></script>
-    <title>TrackerApp</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking App</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="./src/app.js" defer></script>
+    <script type="module" src="/src/main.js" defer></script>
+    <script type="module" src="/src/buttonsounds.js" defer></script>
+</head>
+      
 
   <body>
 
@@ -28,11 +30,61 @@
 </div>
    
      </header>
+
+     <div>
+      <form class="user-input-form" id="form">
+          <div>
+            <label for="username">Please enter your name:</label>
+            <input
+              type="text"
+              placeholder="Enter your name here..."
+              id="username"
+              name="username"
+              required
+            />
+          </div>
+      
+          <div>
+            <label for="email">Please enter your email:</label>
+            <input
+              type="email"
+              placeholder="Enter your email here..."
+              id="email"
+              name="email"
+            />
+          </div>
+      
+          <div>
+            <label for="password">Please enter your password:</label>
+            <input
+              type="password"
+              placeholder="Enter your password here..."
+              id="password"
+              name="password"
+            />
+          </div>
+      
+          <div>
+            <input type="checkbox" id="showPassword" name="showPassword" />
+            <label for="showPassword">Show Password</label>
+          </div>
+      
+          <div>
+            <input type="submit" value="Submit" />
+            
+          </div>
+        </form>
+
+        <button class="toggle-btn" id="Sign-in-button" onclick="toggleButtons()">Sign-in</button>
      
      <div class="control-container">
   <div class="button-wrapper">
       <button id="tracker-toggle" aria-label="Toggle Tracker"><i class="fa-solid fa-toggle-on"></i></button>
 <span class="button-label">Tracker</span>
+<div class="button-container">
+  
+</div>
+
 </div>
 
 <div class="button-wrapper">
@@ -48,8 +100,8 @@
 </div>
 
   <section id="map-section">
+  <div id="mapy">
       <h2>Live Map</h2>
-      <div id="map-placeholder">(Map Placeholder)</div>
 
 <div class="button-wrapper"> 
       <button id="location-share-button" aria-label="Share Your Location"><i class="fa-solid fa-location-pin"></i></button>
@@ -58,6 +110,7 @@
 <div class="button-wrapper">
   <button id="find-me-button" aria-label="Send Alert to Group"><i class ="fa-solid fa-magnifying-glass-location"></i></button>
     <span id="find-me-label">Find Me!</span>
+</div>
 </div>
   </section>
 
