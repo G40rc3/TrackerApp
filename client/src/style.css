@@ -1,3 +1,7 @@
+#mapy {
+  margin: 0 auto;
+  overflow: hidden;
+}
 section{
     border: 2px solid black;
     height:500px;

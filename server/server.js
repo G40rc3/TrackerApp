@@ -4,8 +4,13 @@ import dotenv from "dotenv";
 import pg from "pg";
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+app.use(
+  cors({
+    origin: "https://trackerappserver.onrender.com",
+    methods: ["GET", "POST"],
+  })
+);
 dotenv.config();
 
 const db = new pg.Pool({
