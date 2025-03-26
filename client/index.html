@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>TrackerApp</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="src/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script type="module" src="/src/main.js"></script>
+    <title>TrackerApp</title>
+  </head>
+
+  <body>
+
+   <header> 
+  <div class="glass-shape"></div>
+  <div class="button-wrapper">
+  <button id="settings-button" aria-label="Open Settings"><i class ="fa-solid fa-tools"></i></button>
+  <span class="button-label">Settings</span>
+</div>
+
+  <div id="logo-box">
+    <img src="./src/assets/transparent-logo.png" alt="Wander Tracker Logo" />
+  </div>
+  <div class="button-wrapper">
+  <button id="profile-button" aria-label="Open Profile"><i class ="fa-solid fa-user"></i></button>
+    <span class="button-label">Profile</span>
+</div>
+   
+     </header>
+     
+     <div class="control-container">
+  <div class="button-wrapper">
+      <button id="tracker-toggle" aria-label="Toggle Tracker"><i class="fa-solid fa-toggle-on"></i></button>
+<span class="button-label">Tracker</span>
+</div>
+
+<div class="button-wrapper">
+<button id="alert-button" aria-label="Send Alert to Family"><i class="fa-solid fa-person-circle-exclamation"></i>
+</button>
+<span class="button-label">Alert Family!</span>
+</div>
+
+<div class="button-wrapper"> 
+      <button id="group-button" aria-label="View Group Members"><i class="fa-solid fa-people-group"></i></button>
+      <span class="button-label">Group</span>
+</div>
+</div>
+
+  <section id="map-section">
+      <h2>Live Map</h2>
+      <div id="map-placeholder">(Map Placeholder)</div>
+
+<div class="button-wrapper"> 
+      <button id="location-share-button" aria-label="Share Your Location"><i class="fa-solid fa-location-pin"></i></button>
+<span id="location-share-label">Share my location</span>
+</div>
+<div class="button-wrapper">
+  <button id="find-me-button" aria-label="Send Alert to Group"><i class ="fa-solid fa-magnifying-glass-location"></i></button>
+    <span id="find-me-label">Find Me!</span>
+</div>
+  </section>
+
+<section id="action-section">
+      <div class="box 1">
+        <div class="button-wrapper">
+        <button id="contact-emergency-button" aria-label="Call Emergency Services"> <i class ="fa-solid fa-first-aid"></i></button>
+  <span id="action-labels">Contact Emergency Services</span>
+</div>
+      </div>
+      <div class="box 3">
+        <div class="button-wrapper">
+        <button id="ride-hail" aria-label="Book a Ride"><i class ="fa-solid fa-car-side"></i></button>
+        <span id="action-labels">Book a Ride</span>
+      </div>
+      </div>
+
+      <div class="box 4"> 
+        <div class="button-wrapper">
+        <button id="safe-places" aria-label="Find a list of safe places"> <i class ="fa-solid fa-hotel"></i></button>
+        <span id="action-labels">Find a Safe Place</span>
+      </div>
+      </div>
+</section>
+
+  <footer>Copyright© 2025 Wander Tracker. All Rights Reserved </footer>
+ 
+  </body>
 </html>
