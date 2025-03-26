@@ -291,113 +291,42 @@ padding: 20px;
   color: #F5792D;
   font-family: Roboto;
   cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-#contact-emergency-button {
-  background: none;
-}
-
-#contact-emergency-button:hover {
-  background: #f57a2d85;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-
-#contact-emergency-button i {
-    font-size: 50px;
-    color: #FF3131;
+  a:hover {
+    color: #747bff;
   }
-  
-#ride-hail{
-  background: none;
-}
-
-#ride-hail:hover {
-  background: #f57a2d85;
-  }
-
-#ride-hail i {
-    font-size: 50px;
-    color: #FF3131;
-  }
-
-  #safe-places{
-    background: none;
-  }
-   
-  #safe-places:hover {
-    background: #f57a2d85;
-  
-    }
-
-    #safe-places i {
-      font-size: 50px;
-      color: #FF3131;
-    }
-
-.action-card {
- width: 40%;
- padding: 20px;
- color: white;
- border-radius: 5px;
- cursor: pointer;
-}
-
-footer {
- margin-top: 20px;
- padding: 10px;
- background: rgb(4, 4, 52);
- color: #F5792D;
- border-radius: 10px;
- box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.7);
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    text-align: center;
-    padding: 10px;
-  }
-
-  #logo-box {
-    max-width: 180px;
-  }
-
-  #logo-box img {
-    height: 150px;
-    width: 180px;
-  }
-
-  .glass-shape {
-    width: 95%;
-    height: 200px;
-    border-radius: 15px;
-  }
-
-  .control-container {
-    background-color: rgba(0, 234, 255, 0.162);
-    flex-wrap: wrap;
-    flex-direction: row;
-    border: none;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-  }
-
   button {
-    width: 85px;
-    height: 85px;
-    font-size: 15px;
-  }
-
-  button:hover {
-background: rgba(0, 234, 255, 0.162);
-  }
-
-  button i {
-    font-size: 20px;
-
-  }
-
-  #map-section {
-    width: 90%;
+    background-color: #f9f9f9;
   }
 }
+section div  {
+  width: 85vw;
+  height: 60vmin;
+  display: flex;
+  gap: 5px;
+}
+section div img{
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10ox;
+  transition: all 0.3s;
+}
+section div img:hover {
+  flex: 4;}
